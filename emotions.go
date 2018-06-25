@@ -30,7 +30,7 @@ func (emo *Emo) GetEmotions(photoURL string) ([]Face, error) {
 
 	// create request
 	body := []byte(`{"url": "` + photoURL + `"}`)
-	req, _ := http.NewRequest("POST", "https://api.projectoxford.ai/emotion/v1.0/recognize", bytes.NewBuffer(body))
+	req, _ := http.NewRequest("POST", "https://westcentralus.api.cognitive.microsoft.com/face/v1.0/detect", bytes.NewBuffer(body))
 	req.Header.Add("Ocp-Apim-Subscription-Key", emo.Key)
 	req.Header.Add("Content-Type", "application/json")
 
