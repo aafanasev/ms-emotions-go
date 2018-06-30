@@ -36,12 +36,13 @@ func (emo *Emo) GetEmotions(photoURL string) ([]Face, error) {
 
 	// exec request
 	resp, errorHTTP := emo.Client.Do(req)
-	defer resp.Body.Close()
 
 	if errorHTTP != nil {
 		log.Panic(errorHTTP)
 		return nil, errors.New("API service unavaiable")
 	}
+
+	defer resp.Body.Close()
 
 	// read response stream to bytes
 	response, errorIO := ioutil.ReadAll(resp.Body)
