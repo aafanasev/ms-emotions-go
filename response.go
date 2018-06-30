@@ -15,6 +15,7 @@ type FaceRectangle struct {
 	Height int
 }
 
+// FaceAttributes
 type FaceAttributes struct {
 	Smile      float32
 	HeadPose   HeadPose
@@ -32,18 +33,21 @@ type FaceAttributes struct {
 	Hair       Hair
 }
 
+// HeadPose
 type HeadPose struct {
 	Pitch float32
 	Roll  float32
 	Yaw   float32
 }
 
+// FacialHair
 type FacialHair struct {
 	Moustache float32
 	Beard     float32
 	Sideburns float32
 }
 
+// Emotion
 type Emotion struct {
 	Anger     float32
 	Contempt  float32
@@ -55,41 +59,49 @@ type Emotion struct {
 	Surprise  float32
 }
 
+// Blur
 type Blur struct {
 	BlurLevel string
 	Value     float32
 }
 
+// Exposure
 type Exposure struct {
 	ExposureLevel string
 	Value         float32
 }
 
+// Noise
 type Noise struct {
 	NoiseLevel string
 	Value      float32
 }
 
+// Makeup
 type Makeup struct {
 	EyeMakeup bool
 	LipMakeup bool
 }
 
+// Accessory
 type Accessory struct {
 }
 
+// Occlusion
 type Occlusion struct {
 	ForeheadOccluded bool
 	EyeOccluded      bool
 	MouthOccluded    bool
 }
 
+// Hair
 type Hair struct {
 	Bald      float32
 	Invisible bool
 	HairColor []HairColor
 }
 
+// HairColor
 type HairColor struct {
 	Color      string
 	Confidence float32
