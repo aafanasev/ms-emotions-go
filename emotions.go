@@ -73,10 +73,3 @@ func (emo *Emo) GetEmotions(photoURL string) ([]Face, error) {
 	log.Printf("Found %d faces", len(results))
 	return results, nil
 }
-
-func round(val float32) int {
-	if val < 0 {
-		return int(val - 0.5)
-	}
-	return int(val + 0.5)
-}
