@@ -106,3 +106,9 @@ type HairColor struct {
 	Color      string
 	Confidence float32
 }
+
+// ErrorAPI - Emotions API error response
+type ErrorAPI struct {
+	StatusCode int
+	Message    string
+}
