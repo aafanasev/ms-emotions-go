@@ -14,4 +14,4 @@ Get emotions from URL
 
 Add to import
 
-`"github.com/jokuskay/ms-emotions-go"`
+`"github.com/aafanasev/ms-emotions-go"`
